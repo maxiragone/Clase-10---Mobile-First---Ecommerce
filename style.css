@@ -1,0 +1,160 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap');
+
+@font-face {
+  /* font-family es un alias */
+  font-family: "STARWARS";
+  /* los src linkean a donde tenga la fuente.. tenerla en la carpeta assets */
+  src:
+    url("./assets/STARWARS/STARWARS.eot") format("eot"),
+    url("./assets/STARWARS/STARWARS.woff") format("woff"),
+    url("./assets/STARWARS/STARWARS.ttf") format("truetype"),
+    url("./assets/STARWARS/STARWARS.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Sentences */
+
+/* font-family: 'Lato',
+sans-serif;
+font-family: 'Open Sans',
+sans-serif; */
+
+
+/* colors */
+:root {
+  --main-dark-grey: #7895B2;
+  --main-medium-grey: #AEBDCA;
+  --main-medium-beige: #E8DFCA;
+  --main-light-beige: #F5EFE6;
+  --main-dark-brown: #967E76;
+  --main-medium-brown: #D7C0AE;
+}
+
+/* resets */
+* {
+  margin: 0;
+  padding: 1%;
+}
+
+body {
+  background-color: var(--main-dark-grey);
+  color: var(--main-light-beige);
+}
+
+
+/* header/navbar */
+h1 {
+  font-family: 'STARWARS';
+}
+
+p,
+li,
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  align-content: space-between;
+  background-color: var(--main-medium-grey);
+  padding: 8%;
+  margin: -2%;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--main-medium-beige);
+  font-size: 1.7em;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.dropdown {
+  /* usamos el "dispay:none" para hacer desaparecer el menú*/
+  display: none;
+  position: absolute;
+  background-color: var(--main-medium-grey);
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 5;
+  /* para que la hamburguesa quede a la derecha usamos right */
+  right: -30px;
+  top: 40px;
+}
+
+.menu:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  list-style: none;
+}
+
+/* cuerpo */
+.description {
+  margin-top: 5%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 85%;
+  text-align: center;
+  margin: auto;
+
+}
+
+main img {
+  height: 200px;
+}
+
+/* product */
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% 0;
+  border: 1.5px solid var(--main-medium-grey);
+  padding: 3%;
+  box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.64);
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgContainer .heart {
+  position: absolute;
+  top: 6%;
+  right: 9%;
+  font-size: 1.5em;
+}
+
+.product button {
+  margin: 5% 0;
+  border-radius: 10px;
+  border: 1px solid var(--main-medium-brown);
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--main-dark-brown);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.product button:hover {
+  background-color: var(--main-medium-brown);
+}
+
+.product button a {
+  text-decoration: none;
+  color: var(--main-light-beige);
+}
