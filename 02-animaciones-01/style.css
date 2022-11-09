@@ -1,0 +1,59 @@
+.cuad {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+}
+
+.cuadradito {
+  animation-name: cuadradoAnim;
+  animation-duration: 3s;
+}
+
+@keyframes cuadradoAnim {
+  from {
+    background-color: blueviolet;
+  }
+
+  to {
+    background-color: burlywood;
+  }
+}
+
+/* /// */
+
+.cuadradito2 {
+  animation-name: cuadradoAnim2;
+  animation-duration: 5s;
+}
+
+@keyframes cuadradoAnim2 {
+  0% {
+    background-color: blueviolet;
+    ;
+  }
+
+  33% {
+    background-color: cyan;
+    width: 150px;
+  }
+
+  50% {
+    background-color: burlywood;
+    width: 20%;
+  }
+}
+
+/* /// */
+
+.cuadradito3 {
+  animation-name: cuadradoAnim2;
+  animation-duration: 5s;
+  animation-delay: 2s;
+}
+
+.cuadradito4 {
+  animation-name: cuadradoAnim2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}

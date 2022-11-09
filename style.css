@@ -96,6 +96,11 @@ header a {
   list-style: none;
 }
 
+/* nav oculta */
+.inlineList {
+  display: none;
+}
+
 /* cuerpo */
 .description {
   margin-top: 5%;
@@ -128,6 +133,42 @@ main img {
   -moz-box-shadow: 6px 5px 11px 0px rgba(0, 0, 0, 0.64);
 }
 
+.imgContainer,
+.newArrivalContainer {
+  position: relative
+}
+
+.newArrivalContainer {
+  z-index: 10;
+}
+
+.newArrivalContainer .sticker {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  background: url(./assets/Sticker_star.png) no-repeat;
+  background-size: 75px;
+  filter: hue-rotate(318deg);
+  top: -40px;
+  right: -160px;
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.newArrivalContainer .msg {
+  color: black;
+  text-align: center;
+  font-size: 1.3em;
+  width: 75px;
+  position: absolute;
+  margin: -8px 0px 0px 92px;
+}
+
 .imgContainer {
   position: relative;
 }
@@ -152,9 +193,127 @@ main img {
 
 .product button:hover {
   background-color: var(--main-medium-brown);
+  animation: inColorHover 1s ease forwards 1;
+}
+
+@keyframes inColorHover {
+  from {
+    background-color: var(--main-dark-brown);
+  }
+
+  to {
+    background-color: var(--main-medium-brown);
+  }
 }
 
 .product button a {
   text-decoration: none;
   color: var(--main-light-beige);
+}
+
+/* Media queries al final! */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  i {
+    font-size: 2em;
+  }
+
+  p,
+  li {
+    font-size: 1.5em;
+  }
+
+  .product button {
+    padding: 3% 13%;
+    font-size: 2em;
+  }
+
+  main img {
+    width: 300px;
+    height: auto;
+  }
+
+  main img:hover {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4.5em;
+  }
+
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .product {
+    width: 40%;
+    margin: 4% 0;
+  }
+
+  .product button {
+    padding: 3% 6%;
+    font-size: 2em;
+  }
+
+  main img {
+    width: 350px;
+    height: auto;
+  }
+
+  main img:hover {
+    height: 360px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .inlineList {
+    margin-top: 4%;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .inlineList li {
+    display: inline;
+  }
+}
+
+@media (min-width: 1480px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  .inlineList li {
+    font-size: 2.5em;
+
+  }
+
+  .product {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .product {
+    width: 18%;
+  }
+
+  .product button {
+    padding: 3% 4%;
+  }
 }
